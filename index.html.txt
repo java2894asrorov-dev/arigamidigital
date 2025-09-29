@@ -1,0 +1,381 @@
+"<!DOCTYPE html>
+<html lang=\"uk\">
+<head>
+  <meta charset=\"UTF-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <title>Arigami Digital - Професійна реклама та маркетинг</title>
+  <meta name=\"description\" content=\"Arigami Digital - експерти з таргетованої реклами, SMM та брендингу. Ми створюємо ефективні рекламні кампанії з повним контролем результату.\">
+  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap\" rel=\"stylesheet\">
+  <script src=\"https://cdn.tailwindcss.com\"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'display': ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .floating-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .shape-3d {
+      position: absolute;
+      opacity: 0.15;
+      animation: float 8s ease-in-out infinite;
+      border-radius: 20px;
+    }
+    .shape-cube {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
+    }
+    .shape-sphere {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle at 30% 30%, #60a5fa, #2563eb);
+      border-radius: 50%;
+      box-shadow: 0 30px 60px rgba(59, 130, 246, 0.3);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotateY(0deg); }
+      25% { transform: translateY(-30px) rotateY(90deg); }
+      50% { transform: translateY(15px) rotateY(180deg); }
+      75% { transform: translateY(-15px) rotateY(270deg); }
+    }
+    .shape-1 { top: 15%; right: 5%; animation-delay: -2s; }
+    .shape-2 { top: 65%; right: 3%; animation-delay: -5s; }
+    .shape-3 { top: 25%; left: 3%; animation-delay: -1s; }
+    .shape-4 { top: 85%; left: 8%; animation-delay: -8s; }
+  </style>
+</head>
+<body class=\"bg-white\">
+  <div id=\"root\">
+    <!-- Header -->
+    <header class=\"fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-40\">
+      <div class=\"container mx-auto px-6 py-4\">
+        <div class=\"flex items-center justify-between\">
+          <div class=\"flex items-center space-x-3\">
+            <img src=\"https://customer-assets.emergentagent.com/job_041d947b-c392-44a0-8a73-ec2e8e1b6062/artifacts/xt8024o8_file_000000003d9462468e13d4fece119786.png\" alt=\"Arigami Digital Logo\" class=\"h-12 w-12 object-contain\">
+            <div>
+              <div class=\"font-display font-bold text-xl text-gray-900\">ARIGAMI</div>
+              <div class=\"text-lg text-blue-600 font-mono font-black uppercase tracking-wide\">DIGITAL</div>
+            </div>
+          </div>
+          <nav class=\"hidden lg:flex items-center space-x-8\">
+            <a href=\"#services\" class=\"text-gray-700 hover:text-blue-600 transition-colors\">Послуги</a>
+            <a href=\"#about\" class=\"text-gray-700 hover:text-blue-600 transition-colors\">Про нас</a>
+            <a href=\"#contact\" class=\"text-gray-700 hover:text-blue-600 transition-colors\">Контакти</a>
+            <button onclick=\"scrollToContact()\" class=\"bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-all\">
+              БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class=\"min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-24 pb-16 relative overflow-hidden\">
+      <!-- 3D Shapes -->
+      <div class=\"floating-shapes\">
+        <div class=\"shape-3d shape-cube shape-1\"></div>
+        <div class=\"shape-3d shape-sphere shape-2\"></div>
+        <div class=\"shape-3d shape-cube shape-3\"></div>
+        <div class=\"shape-3d shape-sphere shape-4\"></div>
+      </div>
+      
+      <div class=\"container mx-auto px-6 relative z-10\">
+        <div class=\"max-w-6xl mx-auto\">
+          <div class=\"grid lg:grid-cols-2 gap-12 items-center\">
+            <div class=\"space-y-8\">
+              <div class=\"space-y-6\">
+                <h1 class=\"text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight\">
+                  Ваш бізнес заслуговує на
+                  <span class=\"bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent\"> найкращу </span>
+                  рекламу
+                </h1>
+                <p class=\"text-xl text-gray-600 leading-relaxed\">
+                  Створюємо ефективні рекламні кампанії з повним контролем результату. 
+                  Стратегія + Аналітика + Креатив = Ваш успіх.
+                </p>
+              </div>
+              <div class=\"flex flex-col sm:flex-row gap-4\">
+                <button onclick=\"scrollToContact()\" class=\"bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300\">
+                  РОЗПОЧАТИ ЗАРАЗ
+                </button>
+                <button onclick=\"scrollToServices()\" class=\"border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:border-transparent px-8 py-4 rounded-full text-lg font-medium transition-all duration-300\">
+                  ДІЗНАТИСЯ БІЛЬШЕ
+                </button>
+              </div>
+              <div class=\"grid grid-cols-3 gap-8 pt-8\">
+                <div class=\"text-center\">
+                  <div class=\"text-3xl font-bold text-blue-600\">300%</div>
+                  <div class=\"text-sm text-gray-600 uppercase tracking-wide\">Зростання продажів</div>
+                </div>
+                <div class=\"text-center\">
+                  <div class=\"text-3xl font-bold text-blue-600\">∞</div>
+                  <div class=\"text-sm text-gray-600 uppercase tracking-wide\">Креативних ідей</div>
+                </div>
+                <div class=\"text-center\">
+                  <div class=\"text-3xl font-bold text-blue-600\">24/7</div>
+                  <div class=\"text-sm text-gray-600 uppercase tracking-wide\">Підтримка клієнтів</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id=\"services\" class=\"py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 relative overflow-hidden\">
+      <div class=\"container mx-auto px-6 relative z-10\">
+        <div class=\"max-w-6xl mx-auto\">
+          <div class=\"text-center mb-16\">
+            <h2 class=\"text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6\">Наша Місія</h2>
+            <p class=\"text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed\">
+              Ми не просто робимо рекламу — ми створюємо майбутнє вашого бізнесу
+            </p>
+          </div>
+          
+          <div class=\"grid lg:grid-cols-2 gap-16 items-center mb-20\">
+            <div class=\"space-y-8\">
+              <div class=\"space-y-6\">
+                <h3 class=\"text-3xl font-bold text-gray-900 leading-tight\">
+                  Маркетинг — це <span class=\"text-blue-600\">серце</span> кожного успішного бізнесу
+                </h3>
+                <p class=\"text-lg text-gray-700 leading-relaxed\">
+                  У світі, де щосекунди з'являються тисячі нових компаній, виживають лише ті, хто вміє правильно розказати про себе. Маркетинг — це не витрати, це <strong class=\"text-purple-600\">інвестиція у ваше майбутнє</strong>.
+                </p>
+                <p class=\"text-lg text-gray-700 leading-relaxed\">
+                  Кожен долар, вкладений у якісну рекламу, повертається десятикратно. Ми знаємо, як зробити ваш голос почутим серед мільйонів інших.
+                </p>
+              </div>
+            </div>
+            
+            <div class=\"relative\">
+              <div class=\"bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-white relative overflow-hidden\">
+                <div class=\"relative z-10\">
+                  <h3 class=\"text-2xl font-bold mb-4 text-center\">Чому маркетинг — це №1?</h3>
+                  <ul class=\"space-y-3\">
+                    <li class=\"flex items-center space-x-3\">
+                      <div class=\"w-2 h-2 bg-yellow-300 rounded-full\"></div>
+                      <span>Без клієнтів немає бізнесу</span>
+                    </li>
+                    <li class=\"flex items-center space-x-3\">
+                      <div class=\"w-2 h-2 bg-yellow-300 rounded-full\"></div>
+                      <span>Перше враження визначає все</span>
+                    </li>
+                    <li class=\"flex items-center space-x-3\">
+                      <div class=\"w-2 h-2 bg-yellow-300 rounded-full\"></div>
+                      <span>Конкуренція не спить</span>
+                    </li>
+                    <li class=\"flex items-center space-x-3\">
+                      <div class=\"w-2 h-2 bg-yellow-300 rounded-full\"></div>
+                      <span>Ваша історія заслуговує на увагу</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id=\"contact\" class=\"py-20 bg-white\">
+      <div class=\"container mx-auto px-6\">
+        <div class=\"max-w-4xl mx-auto\">
+          <div class=\"text-center mb-16\">
+            <h2 class=\"text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6\">Готові розпочати?</h2>
+            <p class=\"text-xl text-gray-600\">Отримайте безкоштовну консультацію та дізнайтеся, як ми можемо допомогти вашому бізнесу зрости</p>
+          </div>
+          
+          <div class=\"bg-white rounded-2xl shadow-xl border border-gray-100 p-8\">
+            <h3 class=\"text-2xl font-semibold text-gray-900 mb-6\">Залишити заявку</h3>
+            
+            <form id=\"contactForm\" class=\"space-y-6\">
+              <div class=\"space-y-2\">
+                <label class=\"text-sm font-medium text-gray-700\">Ваше ім'я *</label>
+                <input name=\"name\" type=\"text\" required class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\" placeholder=\"Ваше ім'я\">
+              </div>
+              
+              <div class=\"grid md:grid-cols-2 gap-4\">
+                <div class=\"space-y-2\">
+                  <label class=\"text-sm font-medium text-gray-700\">Номер для зв'язку *</label>
+                  <input name=\"phone\" type=\"tel\" required class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\" placeholder=\"+380 (63) 712-38-14\">
+                </div>
+                <div class=\"space-y-2\">
+                  <label class=\"text-sm font-medium text-gray-700\">Телеграм</label>
+                  <input name=\"telegram\" type=\"text\" class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\" placeholder=\"@your_username\">
+                </div>
+              </div>
+              
+              <div class=\"space-y-2\">
+                <label class=\"text-sm font-medium text-gray-700\">Чим ви займаєтесь? *</label>
+                <input name=\"business\" type=\"text\" required class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\" placeholder=\"Опишіть вашу діяльність...\">
+              </div>
+              
+              <div class=\"space-y-2\">
+                <label class=\"text-sm font-medium text-gray-700\">Посилання на Instagram</label>
+                <input name=\"instagram\" type=\"url\" class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\" placeholder=\"https://instagram.com/your_account\">
+              </div>
+              
+              <div class=\"space-y-2\">
+                <label class=\"text-sm font-medium text-gray-700\">Яка послуга вас цікавить? *</label>
+                <select name=\"service\" required class=\"w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500\">
+                  <option value=\"\">Оберіть послугу</option>
+                  <option value=\"Таргетована реклама\">Таргетована реклама</option>
+                  <option value=\"Google Ads\">Google Ads</option>
+                  <option value=\"SMM\">SMM</option>
+                  <option value=\"Brand Marketing\">Brand Marketing</option>
+                  <option value=\"Індивідуальні консультації\">Індивідуальні консультації</option>
+                  <option value=\"Створення креативів\">Створення креативів</option>
+                  <option value=\"Лендинги та сайти\">Лендинги та сайти</option>
+                  <option value=\"Логотипи та брендинг\">Логотипи та брендинг</option>
+                </select>
+              </div>
+              
+              <div class=\"space-y-2\">
+                <label class=\"text-sm font-medium text-gray-700\">Який ваш основний запит?</label>
+                <textarea name=\"request\" rows=\"4\" class=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none\" placeholder=\"Розкажіть детальніше про ваші потреби...\"></textarea>
+              </div>
+              
+              <button type=\"submit\" class=\"w-full bg-blue-600 hover:bg-blue-700 text-white h-12 rounded-lg font-medium transition-colors\">
+                ВІДПРАВИТИ ЗАЯВКУ
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class=\"bg-gray-900 text-white py-16\">
+      <div class=\"container mx-auto px-6\">
+        <div class=\"grid lg:grid-cols-4 gap-12\">
+          <div class=\"lg:col-span-2 space-y-6\">
+            <div class=\"flex items-center space-x-3\">
+              <img src=\"https://customer-assets.emergentagent.com/job_041d947b-c392-44a0-8a73-ec2e8e1b6062/artifacts/xt8024o8_file_000000003d9462468e13d4fece119786.png\" alt=\"Arigami Digital Logo\" class=\"h-12 w-12 object-contain\">
+              <div>
+                <div class=\"font-display font-bold text-2xl\">ARIGAMI</div>
+                <div class=\"text-xl text-blue-400 font-mono font-black uppercase tracking-wide\">DIGITAL</div>
+              </div>
+            </div>
+            
+            <p class=\"text-gray-300 text-lg leading-relaxed max-w-md\">
+              Створюємо ефективні рекламні кампанії з повним контролем результату. 
+              Ваш успіх - наш пріоритет.
+            </p>
+            
+            <div class=\"flex space-x-6\">
+              <a href=\"https://www.facebook.com/profile.php?id=61576144653610\" target=\"_blank\" class=\"text-gray-400 hover:text-blue-400 transition-colors\">
+                <span class=\"sr-only\">Facebook</span>
+                <svg class=\"w-6 h-6\" fill=\"currentColor\" viewBox=\"0 0 24 24\">
+                  <path d=\"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z\"/>
+                </svg>
+              </a>
+              <a href=\"https://www.instagram.com/arigami.digital/\" target=\"_blank\" class=\"text-gray-400 hover:text-pink-400 transition-colors\">
+                <span class=\"sr-only\">Instagram</span>
+                <svg class=\"w-6 h-6\" fill=\"currentColor\" viewBox=\"0 0 24 24\">
+                  <path d=\"M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.618 5.367 11.986 11.988 11.986s11.987-5.368 11.987-11.986C24.004 5.367 18.635.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348z\"/>
+                </svg>
+              </a>
+              <a href=\"https://wa.me/380637123814\" target=\"_blank\" class=\"text-gray-400 hover:text-green-500 transition-colors\">
+                <span class=\"sr-only\">WhatsApp</span>
+                <svg class=\"w-6 h-6\" fill=\"currentColor\" viewBox=\"0 0 24 24\">
+                  <path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488\"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class=\"space-y-6\">
+            <h4 class=\"text-xl font-semibold\">Контакти</h4>
+            <div class=\"space-y-4\">
+              <div>
+                <div class=\"text-gray-400 text-sm\">Телефон</div>
+                <a href=\"tel:+380637123814\" class=\"text-white hover:text-blue-400 transition-colors\">
+                  +380 (63) 712-38-14
+                </a>
+              </div>
+              <div>
+                <div class=\"text-gray-400 text-sm\">Email</div>
+                <a href=\"mailto:arigamidigital@gmail.com\" class=\"text-white hover:text-blue-400 transition-colors\">
+                  arigamidigital@gmail.com
+                </a>
+              </div>
+              <div>
+                <div class=\"text-gray-400 text-sm\">WhatsApp</div>
+                <a href=\"https://wa.me/380637123814\" class=\"text-white hover:text-blue-400 transition-colors\">
+                  +380 (63) 712-38-14
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class=\"border-t border-gray-700 mt-12 pt-8\">
+          <div class=\"flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0\">
+            <div class=\"text-gray-400 text-sm\">
+              © 2024 Arigami Digital. Всі права захищені.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function scrollToServices() {
+      document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData();
+      const form = e.target;
+      
+      // Ваши настоящие entry коды из Google Forms
+      formData.append('entry.2047965147', form.name.value);
+      formData.append('entry.2067534945', form.phone.value);
+      formData.append('entry.1942353565', form.telegram.value);
+      formData.append('entry.703946920', form.business.value);
+      formData.append('entry.1089921804', form.request.value);
+      formData.append('entry.1033157831', form.instagram.value);
+      formData.append('entry.1471033604', form.service.value);
+      
+      try {
+        await fetch('https://docs.google.com/forms/d/e/1FAIpQLScPTPBVvl4aMeZ2DQ5u921kfvqMwzTwSvfXzv8df-bWtB23XQ/formResponse', {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData
+        });
+        
+        alert('Заявка надіслана! Ми зв'яжемося з вами протягом 15 хвилин ⚡');
+        form.reset();
+      } catch (error) {
+        alert('Помилка відправки. Зв'яжіться з нами напрямую: +380637123814');
+      }
+    });
+  </script>
+</body>
+</html>"
